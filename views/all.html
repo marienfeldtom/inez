@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>INEZ ADMIN</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.1/image-picker.min.css" integrity="sha256-8b3s+ez6wXPJKBWlHOEW2aXyB1eYluL1V3wqh+vHpis=" crossorigin="anonymous" />
+    <!-- Custom CSS -->
+    <style>
+      body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+      #bild {
+        height: 75px;
+        width: 75px;
+      }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">INEZ Admin Panel</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/all">Alle Produkte <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="/">Neues Produkt</a>
+          </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </div>
+  </div>
+</nav>
+
+<main role="main" class="container">
+
+  <div class="starter-template">
+    <h1>Willkommen!</h1>
+    <p class="lead">Hier siehst du alle Lebensmittel!</p>
+  </div>
+
+  <div class="row">
+      <div class="col">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Bild</th>
+              <th scope="col">Kategorie</th>
+              <th scope="col">Synonyme</th>
+              <th scope="col">Einheit</th>
+              <th scope="col">Weitere</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#lebensmittel}}
+            <tr>
+              <th scope="row">{{idx}}</th>
+              <td>{{produktname}} / {{plural}}</td>
+              <td><img id="bild" src="{{bild}}" class="img-fluid img-thumbnail"></td>
+              <td>{{kategorie}}</td>
+              <td>{{synonyme}}</td>
+              <td>{{preinheit}}</td>
+              <td>{{einheiten}}</td>
+            </tr>
+            {{/lebensmittel}}
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+</main><!-- /.container -->
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.1/image-picker.js" integrity="sha256-ckwhC1oSC7R08Orw576xZ0e0BjYtTWRExevDePSmSMM=" crossorigin="anonymous"></script>
+<script>
+$("#bilder").imagepicker();
+</script>
+</body>
+</html>

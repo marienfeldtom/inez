@@ -8,7 +8,7 @@
     <meta name="description" content=""/>
     <meta name="author" content=""/>
 
-    <title>Starter Template for Bootstrap</title>
+    <title>INEZ ADMIN</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,21 +23,6 @@
   padding: 3rem 1.5rem;
   text-align: center;
 }
-
-.bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -57,99 +42,85 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="/all">Alle Produkte</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Alle Produkte</a>
-      </li>
-      <li class="nav-item">
-            <a class="nav-link" href="#">Neues Produkt</a>
+            <a class="nav-link" href="/">Neues Produkt <span class="sr-only">(current)</span></a>
           </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <div class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    </div>
   </div>
 </nav>
 
 <main role="main" class="container">
 
   <div class="starter-template">
-    <h1>Willkommen, Tom!</h1>
+    <h1>Willkommen!</h1>
     <p class="lead">Hier kannst du Produkte in die Produktdatenbank einpflegen!</p>
   </div>
+{{#exists}}
+  <div class="alert alert-danger" role="alert">
+      Lebensmittel ist bereits vorhanden!
+    </div>
+    {{/exists}}
+
+    {{#done}}
+  <div class="alert alert-success" role="alert">
+      Lebensmittel erfolgreich eingetragen!
+    </div>
+    {{/done}}
 
   <div class="row">
       <div class="col">
-        <form>
+        <form method="post" action="/upload">
             <div class="form-group">
               <label for="exampleFormControlInput1">Produktname</label>
-              <input type="name" class="form-control" id="produktname" placeholder="Kartotte">
+              <input type="name" class="form-control" name="produktname" placeholder="Kartotte">
             </div>
             <div class="form-group">
-            <label>Bild
-                </label>
-                    <select id="bilder">
-                            <option
-                            data-img-src='https://tse1.mm.bing.net/th?id=OIP.l_inupbPSlppg1dleSI8VwHaHa&pid=Api&c=1&h=178&w=178'
-                            value='1'>
-                            <option
-                            data-img-src='https://tse3.mm.bing.net/th?id=OIP.62kWpgTwYi6OCNSzPggbsgHaE7&pid=Api&c=1&h=178&w=178'
-                            value='2'>
-                            <option
-                            data-img-src='https://tse3.mm.bing.net/th?id=OIP.iG1_eDSNo5cKFlz19ZhxJgHaFN&pid=Api&c=1&h=178&w=178'
-                            value='3'>
-                            <option
-                            data-img-src=' https://tse1.mm.bing.net/th?id=OIP.yd0DWTD8EeAfeet7YqOROAHaFN&pid=Api&c=1&h=178&w=178'
-                            value='4'>
-                    </select>
+              <label for="exampleFormControlInput1">Plural</label>
+              <input type="name" class="form-control" name="plural" placeholder="Kartotten">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Bild</label>
+              <input type="name" class="form-control" name="bild" placeholder="URL...">
             </div>
 
             <div class="form-group">
               <label for="kategorie">Kategorie</label>
               <select class="form-control" id="kategorie" name="kategorie">
-                <option>Gemüse</option>
+                <option>Obst & Gemüse</option>
                 <option>Backwaren</option>
-                <option>Theke</option>
+                <option>Milch & Käse</option>
+                <option>Fleisch & Fisch</option>
+                <option>Zutaten & Gewürze</option>
+                <option>Fertig & TK-Produkte</option>
+                <option>Getreideprodukte</option>
+                <option>Snacks & Süßwaren</option>
+                <option>Getränke & Tabak</option>
+                <option>Haushalt & Gesundheit</option>
+                <option>Tierbedarf</option>
+                <option>Baumarkt & Garten</option>
               </select>
             </div>
             <div class="form-group">
-                <label for="synonyme">Synonyme (mit Komma getrennt)</label>
-                <input type="name" class="form-control" id="synonyme" placeholder="Möhre">
+                <label for="synonyme">Synonyme (mit Leerzeichen getrennt)</label>
+                <input type="name" class="form-control" name="synonyme" placeholder="Möhre">
               </div>
-            <div class="form-group">
-                <label>Primäre Einheit</label><br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="preinheit" type="radio" id="inlineCheckbox1" value="Stück">
-                    <label class="form-check-label" for="inlineCheckbox1">Stück</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" name="preinheit"  type="radio" id="inlineCheckbox2" value="Gramm">
-                    <label class="form-check-label" for="inlineCheckbox2">Gramm</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                        <input class="form-check-input" name="preinheit"  type="radio" id="inlineCheckbox2" value="Packung">
-                        <label class="form-check-label" for="inlineCheckbox2">Packung</label>
-                      </div>
-            </div>
-            
-            <div class="form-group">
-                    <label for="synonyme">Grober Preis pro Einheit in Cent</label>
-                    <input type="name" class="form-control" id="preis" placeholder="299">
-                  </div>
-            <div class="form-group">
-                    <label>Weitere Einheiten</label><br>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Stück</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Gramm</label>
-                      </div>
-                </div>
+              <div class="form-group">
+                <label for="synonyme">Primäre Einheit</label>
+                <input type="name" class="form-control" name="preinheit" placeholder="Stück">
+              </div>
+              <div class="form-group">
+                <label for="synonyme">Weitere Einheiten (mit Leerzeichen getrennt)</label>
+                <input type="name" class="form-control" name="einheiten" placeholder="Gramm,Liter">
+              </div>
+
+                <input type="submit" class="btn btn-primary" value="Absenden">
           </form>
       </div>
   </div>
