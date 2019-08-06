@@ -53,6 +53,919 @@
       "einheiten": [
         ""
       ]
+    },
+    {
+      "produktname": "Banane",
+      "plural": "Bananen",
+      "bild": "https://www.hofladen-sauerland.de/media/image/b0/37/70/Banane_600x600.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "",
+      "einheiten": [
+        "Bund"
+      ]
+    },
+    {
+      "produktname": "Brot",
+      "plural": "Brote",
+      "bild": "https://www.honold.ch/components/com_mijoshop/opencart/image/cache/catalog/boulangerie/chnusper-dinkel-brot-500x500.png",
+      "kategorie": "Backwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Zwiebel",
+      "plural": "Zwiebeln",
+      "bild": "https://www.gesundheute.com/wp-content/uploads/2014/10/Onion_on_White-compressed.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Beutel"
+      ]
+    },
+    {
+      "produktname": "Kiwi",
+      "plural": "Kiwis",
+      "bild": "https://saftausbeute.de/wp-content/uploads/2018/10/depositphotos_23183116_m-20151-300x256.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Brötchen",
+      "plural": "Brötchen",
+      "bild": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Kaisersemmel-.jpg/220px-Kaisersemmel-.jpg",
+      "kategorie": "Backwaren",
+      "synonyme": [
+        "Wecken",
+        "Semmel"
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Croissant",
+      "plural": "Croissants",
+      "bild": "http://www.edna.de/WebRoot/EdnaDE/Shops/Edna/Products/876/876.jpg",
+      "kategorie": "Backwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Pfirsich",
+      "plural": "Pfirsiche",
+      "bild": "https://dampfdorado.de/media/image/ac/91/f9/Inawera-Aroma-Pfirsich.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Kirsche",
+      "plural": "Kirschen",
+      "bild": "https://www.obst-lallinger.de/wp-content/uploads/2017/06/Kirsche.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        "Beutel"
+      ]
+    },
+    {
+      "produktname": "Laugenstange",
+      "plural": "Laugenstangen",
+      "bild": "https://files.billa.at/files/artikel/00-504886_01__600x600.jpg",
+      "kategorie": "Backwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Pflaume",
+      "plural": "Pflaumen",
+      "bild": "https://better-smoke.de/21363-large_default/pflaume-aroma.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Gramm",
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Knäckebrot",
+      "plural": "Knäckebrote",
+      "bild": "https://static.essen-und-trinken.de/bilder/66/a2/43077/article_image_small/fe1454b378394e84be7e3b3ecf600862.jpg",
+      "kategorie": "Backwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Milch",
+      "plural": "Milch",
+      "bild": "https://lebensmittel-warenkunde.de/assets/images/milch-milchprodukte.jpg",
+      "kategorie": "Milch & Käse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Liter",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Heidelbeere",
+      "plural": "Heidelbeeren",
+      "bild": "data:image/jpeg;base64,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",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        "Blaubeere"
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        "Beutel",
+        "Kilogramm",
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Käse",
+      "plural": "Käse",
+      "bild": "https://cdn.yamatoscale.com/wp-content/uploads/2016/04/K%C3%A4se-Scheiben_01_00_OH-1.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Stück",
+        "Scheiben",
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Tomate",
+      "plural": "Tomaten",
+      "bild": "http://www.boeschbodenspies.com/wp-content/uploads/2017/08/tomato.png",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Beutel",
+        "Kilogramm",
+        "Packung",
+        "Strauch"
+      ]
+    },
+    {
+      "produktname": "Joghurt",
+      "plural": "Joghurt",
+      "bild": "https://food-trends.info/wordpress/wp-content/uploads/2017/10/elbe-obst-apfel-trend-joghurt-1.jpg",
+      "kategorie": "Milch & Käse",
+      "synonyme": [
+        "Milchspeise"
+      ],
+      "preinheit": "Becher",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Gurke",
+      "plural": "Gurken",
+      "bild": "data:image/jpeg;base64,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",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Paprika",
+      "plural": "Paprika",
+      "bild": "https://www.lebensbaum.com/files/styles/greige_image_476x476/public/images/greiges/paprika1.jpg?itok=UzLrRrGh",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Gramm",
+        "Kilogramm"
+      ]
+    },
+    {
+      "produktname": "Sahne",
+      "plural": "Sahne",
+      "bild": "http://www.besserhaushalten.news/uploads/tx_templavoila/v_sahne_1.jpg",
+      "kategorie": "Milch & Käse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Becher",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Porree",
+      "plural": "Porree",
+      "bild": "https://flash-food.de/wp-content/uploads/2019/02/Lauchzwiebel-03.png",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "",
+      "einheiten": [
+        "Bund",
+        ""
+      ]
+    },
+    {
+      "produktname": "Schmand",
+      "plural": "Schmand",
+      "bild": "https://www.edekanord-shop.de/product-images/576951/0/image496x496",
+      "kategorie": "Milch & Käse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Becher",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Ananas",
+      "plural": "Ananas",
+      "bild": "http://www.granini.ch/data/images/fruit_images/full/02-pickbestfruit-fruits-0007-pineapple.png",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Blumenkohl",
+      "plural": "Blumenkohl",
+      "bild": "https://banner2.kisspng.com/20180328/oue/kisspng-cauliflower-savoy-cabbage-vegetable-take-out-cauliflower-5abc038e7bd3c9.5350445015222711185072.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Brokkoli",
+      "plural": "Brokkoli",
+      "bild": "https://banner2.kisspng.com/20171220/jje/broccoli-png-image-with-transparent-background-5a3ab0d959aff9.89005989151379580136743607.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Bohne",
+      "plural": "Bohnen",
+      "bild": "https://www.balconeuropa.com/de/images/judias-redondas.png",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        "Kilogramm"
+      ]
+    },
+    {
+      "produktname": "Hähnchenbrustfilet",
+      "plural": "Hähnchenbrustfilets",
+      "bild": "https://images-na.ssl-images-amazon.com/images/I/61TZwJmSVeL._SX425_.jpg",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        "Stück"
+      ]
+    },
+    {
+      "produktname": "Erdbeere",
+      "plural": "Erdbeeren",
+      "bild": "https://shop.dampfer-liquid.de/media/image/4f/0a/2a/erdbeere_600x600.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Schale",
+      "einheiten": [
+        "Gramm",
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Hackfleisch",
+      "plural": "Hackfleisch",
+      "bild": "https://www.aldi-nord.de/content/dam/aldi/germany/angebote/2019/kw31/7069_31-2019_RinderHackfleisch-Bio_0002_ON.png/_jcr_content/renditions/opt.1250w.png.res/1562669747619/opt.1250w.png",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Wassermelone",
+      "plural": "Wassermelonen",
+      "bild": "https://images.wogibtswas.at/data/image/500x705/847/saftige-wassermelone-4232424.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Steak",
+      "plural": "Steaks",
+      "bild": "https://png.pngtree.com/element_pic/16/12/08/6a20602afdce9600e93603838214d5c5.jpg",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Kartoffel",
+      "plural": "Kartoffeln",
+      "bild": "https://banner2.kisspng.com/20180413/klq/kisspng-baked-potato-mashed-potato-potatoes-o-brien-french-potatos-5ad0db25d469d2.2292956915236370298701.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        "Erdäpfel"
+      ],
+      "preinheit": "Beutel",
+      "einheiten": [
+        "Kilogramm",
+        "Gramm",
+        ""
+      ]
+    },
+    {
+      "produktname": "Mortadella",
+      "plural": "Mortadella",
+      "bild": "https://s7d5.scene7.com/is/image/CentralMarket/001851392-1?$large$&hei=416&wid=416",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Scheibe",
+      "einheiten": [
+        "Gramm,",
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Knoblauch",
+      "plural": "Knoblauch",
+      "bild": "https://www.gartenjournal.net/wp-content/uploads/Knoblauch-giftig.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Beutel"
+      ]
+    },
+    {
+      "produktname": "Schinken",
+      "plural": "Schinken",
+      "bild": "https://images-na.ssl-images-amazon.com/images/I/41IBDqI0G1L.jpg",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Stück",
+        "Gramm",
+        "Scheibe"
+      ]
+    },
+    {
+      "produktname": "Kohlrabi",
+      "plural": "Kohlrabi",
+      "bild": "https://www.unsereheimat.de/files/_processed_/5/8/csm_439-detailimage_be79b6d24c.png",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Lachs",
+      "plural": "Lachs",
+      "bild": "https://image.stern.de/8003630/large1x1-940-940/972bc27e0e09953c4469becf20c58910/fd/lachs.jpg",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Gramm",
+        "Stück"
+      ]
+    },
+    {
+      "produktname": "Mehl",
+      "plural": "Mehl",
+      "bild": "https://lukasch.com/wp-content/uploads/2015/01/Lukasch_Muehle_Mehl-750x469.jpg",
+      "kategorie": "Zutaten & Gewürze",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Gramm",
+        "Kilogramm"
+      ]
+    },
+    {
+      "produktname": "Krabben",
+      "plural": "Krabben",
+      "bild": "https://delices-supremes.com/wp-content/uploads/Nordseekrabben.jpg.png",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Gramm",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Zucker",
+      "plural": "Zucker",
+      "bild": "https://cdn.pixabay.com/photo/2014/11/28/19/10/lump-sugar-549096_960_720.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Gramm",
+        "Kilogramm"
+      ]
+    },
+    {
+      "produktname": "Salami",
+      "plural": "Salami",
+      "bild": "https://www.failenschmid.de/media/image/49/6c/d5/FAI_Salami_Salami_fein_geschn_1200x1200_chheKkvERqbDoQPsn_600x600.jpg",
+      "kategorie": "Fleisch & Fisch",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Scheibe",
+        "Stück",
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Salz",
+      "plural": "Salz",
+      "bild": "https://images.ichkoche.at/data/image/variations/365x283/1/salz-img-9253.jpg",
+      "kategorie": "Obst & Gemüse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Gramm",
+        "Kilogramm"
+      ]
+    },
+    {
+      "produktname": "Pfeffer",
+      "plural": "Pfeffer",
+      "bild": "https://www.masala-gewuerze.de/out/pictures/master/product/1/tribal-pfeffer--100g_1016_0.jpg",
+      "kategorie": "Zutaten & Gewürze",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Pizza",
+      "plural": "Pizza",
+      "bild": "https://img.pngio.com/free-png-pepperoni-pizza-png-images-transparent-free-png-images-pizza-850_834.png",
+      "kategorie": "Fertig & TK-Produkte",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Chicken Wings",
+      "plural": "Chicken Wings",
+      "bild": "https://images.media-allrecipes.com/userphotos/1120353.jpg",
+      "kategorie": "Fertig & TK-Produkte",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Chips",
+      "plural": "Chips",
+      "bild": "https://4.imimg.com/data4/MN/WH/MY-10847220/1-500x500.jpg",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Lasagne",
+      "plural": "Lasagne",
+      "bild": "http://www.pngmart.com/files/5/Lasagna-PNG-File.png",
+      "kategorie": "Fertig & TK-Produkte",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Erdnussflips",
+      "plural": "Erdnussflips",
+      "bild": "https://www.deutsche-apotheker-zeitung.de/_Resources/Persistent/f/d/1/1/fd114c50e936d83207eee572021eba70ed6f9ac7/D102015_ck_AuT_Erdnuss_4501361-700x477.jpg",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Ravioli",
+      "plural": "Ravioli",
+      "bild": "https://www.discounter-preisvergleich.de/bilder/produkte/7473/7473_2017-12-29-00-26-54.jpg",
+      "kategorie": "Fertig & TK-Produkte",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Dose",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Erdnüsse",
+      "plural": "Erdnüsse",
+      "bild": "https://lebensmittel-warenkunde.de/assets/images/geroestete-erdnuesse.jpg",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Dose",
+      "einheiten": [
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Bier",
+      "plural": "Bier",
+      "bild": "https://brauen.de/media/image/cb/80/65/Die-Krone-des-Bieres-Wie-entsteht-der-Schaum-auf-dem-Bier.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Kasten",
+      "einheiten": [
+        "Flasche"
+      ]
+    },
+    {
+      "produktname": "Wasser",
+      "plural": "Wasser",
+      "bild": "https://cdn.connox.de/m/100030/150691/media/rosendahl/Grand-Cru-Wasserglaeser/Wasserglas-einzeln.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        "Selter"
+      ],
+      "preinheit": "Kasten",
+      "einheiten": [
+        "Flasche"
+      ]
+    },
+    {
+      "produktname": "Schokolade",
+      "plural": "Schokolade",
+      "bild": "https://banner2.kisspng.com/20180208/faw/kisspng-chocolate-bar-photography-chocolate-5a7ca350584f38.5954379915181177123617.jpg",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Stück"
+      ]
+    },
+    {
+      "produktname": "Schnaps",
+      "plural": "Schnaps",
+      "bild": "https://images-na.ssl-images-amazon.com/images/I/41jhzEcopPL.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        "Wodka",
+        "Korn",
+        "Jägermeister",
+        "Ouzo",
+        "Tequilla"
+      ],
+      "preinheit": "Flasche",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Gummibärchen",
+      "plural": "Gummibärchen",
+      "bild": "http://www.lucky-liquid.de/WebRoot/Store3/Shops/es67464/55CF/EEC4/D0FD/8148/9F76/50ED/8963/F477/gummibaerchen_m.png",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Zigaretten",
+      "plural": "Zigaretten",
+      "bild": "http://liquid-news.com/e-zigaretten/wp-content/uploads/2014/07/filterzigaretten.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        "Kippen"
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Salzstangen",
+      "plural": "Salzstangen",
+      "bild": "https://www.bauch.de/wp-content/uploads/2013/03/Fotolia_30124547_XS-300x283.jpg",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Orangensaft",
+      "plural": "Orangensaft",
+      "bild": "https://happy-vita.de/sites/default/files/rezept-saft-orangensaft.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Liter",
+      "einheiten": [
+        "Flasche"
+      ]
+    },
+    {
+      "produktname": "Cola",
+      "plural": "Cola",
+      "bild": "https://www.porzellantreff.de/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/import/1182310-soFSSr.jpg",
+      "kategorie": "Getränke & Tabak",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Flasche",
+      "einheiten": [
+        "Kasten",
+        "Liter"
+      ]
+    },
+    {
+      "produktname": "Spülmittel",
+      "plural": "Spülmittel",
+      "bild": "https://www.testberichte.de/imgs/p_imgs_370/1343969.jpg",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Butter",
+      "plural": "Butter",
+      "bild": "https://image.brigitte.de/10958876/large1x1-622-622/4a9af3c855f24e1a8cdff98757171fdd/HZ/butter.jpg",
+      "kategorie": "Milch & Käse",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Gramm"
+      ]
+    },
+    {
+      "produktname": "Schwamm",
+      "plural": "Schwämme",
+      "bild": "https://www.rinklake.com/media/catalog/product/cache/1/image/1200x/9df78eab33525d08d6e5fb8d27136e95/0/0/00034757.png.png",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Waschmittel",
+      "plural": "Waschmittel",
+      "bild": "https://supermarkt24h.de/media/image/product/4888/md/haushaltswaren-waschmittel-waschmittel-fluessig-g-g-vollwaschmittel-20wl-1-5la-1349495183.jpg",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Staubsaugerbeutel",
+      "plural": "Staubsaugerbeutel",
+      "bild": "https://i.otto.de/i/otto/12742903/staubsaugerbeutel-passend-fuer-bosch-siemens-weiss.jpg?$formatz$",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Pflaster",
+      "plural": "Pflaster",
+      "bild": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ54lc4ys99jS5m_admG274AlN8_zoRFVlE-GCBUpYx68kAX0Q",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
+    },
+    {
+      "produktname": "Zahnbürste",
+      "plural": "Zahnbürsten",
+      "bild": "https://cdn.connox.de/m/100030/234585/media/hay/Tann-Zahnbuerste/Hay-Tann-Zahnbuerste-beige.jpg",
+      "kategorie": "Haushalt & Gesundheit",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        "Packung"
+      ]
+    },
+    {
+      "produktname": "Hundefutter",
+      "plural": "Hundefutter",
+      "bild": "https://images1.zooroyal.net/media/thumbnail/23bf16e19ae0/My-Friend-Kroketten-Hundefutter-20kg-3_720x600.jpg",
+      "kategorie": "Tierbedarf",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Dose"
+      ]
+    },
+    {
+      "produktname": "Katzenfutter",
+      "plural": "Katzenfutter",
+      "bild": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSATcdR0qDhgCQbQKg2BmqyLhbHA_ZdRmhrNhgW5FmyglbkNP-Qlg",
+      "kategorie": "Tierbedarf",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        "Dose",
+        "Stück"
+      ]
+    },
+    {
+      "produktname": "Katzenstreu",
+      "plural": "Katzenstreu",
+      "bild": "https://www.discounter-preisvergleich.de/bilder/produkte/14357/14357_2018-01-08-21-41-33.jpg",
+      "kategorie": "Tierbedarf",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Packung",
+      "einheiten": [
+        ""
+      ]
     }
   ]
 }
