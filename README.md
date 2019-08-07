@@ -16,7 +16,16 @@ The application also offers the Socket.io interface which is used by the app to 
 * socket.io for real time autocomplete and suggestions
 * socket.io-client
 
- ## How to get admin panel running
+## Prerequisites
+
+You will need the following things properly installed on your computer.
+
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM)
+
+ ## Installation
+ 
+ * `git clone <repository-url>` this repository 
  
  **Configuration:**
  Configs can be found in `config.json`.
@@ -26,13 +35,16 @@ The application also offers the Socket.io interface which is used by the app to 
 npm install
 ```
 
+## Running / Development
+
 Start server
  ```javascript
 node server.js
 ```
+### PM2
 
 If you want to keep the server running without having the SSH connection open, take a look at [pm2](https://www.npmjs.com/package/pm2)
-* * *
+
 Start server with pm2
 ```javascript
 pm2 start server.js
