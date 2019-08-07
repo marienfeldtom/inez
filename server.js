@@ -3,8 +3,9 @@ var app = express();
 const low = require('lowdb')
 var cors = require('cors');
 const FileSync = require('lowdb/adapters/FileSync')
+var settings = require("config.json");
 
-const adapter = new FileSync('lebensmittel.json')
+const adapter = new FileSync(settings.file)
 const db = low(adapter)
 
 app.use(express.urlencoded())
@@ -53,6 +54,6 @@ app.post('/upload', function (req, res) {
     }
 });
 
-app.listen(3000, '0.0.0.0', function () {
-    console.log("Working on port 3000");
+app.listen(settings.port, settings.ip, function () {
+    console.log("Working on "+ settings.ip + ":" + settings.port);
 });
