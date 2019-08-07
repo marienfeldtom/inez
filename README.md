@@ -5,7 +5,7 @@ INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. Thi
 In this admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
-## Used technologies/frameworks/dependencys
+## Used technologies/frameworks/dependencies
 
 * Node.JS
 * NPM
