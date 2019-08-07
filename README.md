@@ -13,10 +13,15 @@ The application also offers the Socket.io interface which is used by the app to 
 * MustacheJS
 * lowdb (JSON database)
 * CORS (only enabled for development purposes)
+* socket.io for real time autocomplete and suggestions
+* socket.io-client
 
  ## How to get admin panel running
  
- Install dependencys
+ **Configuration:**
+ Configs can be found in `config.json`.
+ 
+ Install dependencies
 ```javascript
 npm install
 ```
