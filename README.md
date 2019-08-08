@@ -10,13 +10,16 @@ INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. Thi
 In the admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
-- [INEZ Admin](#inez-admin)
+- [INEZ Competition](#inez-competition)
   * [Sequence Diagram](#sequence-diagram)
   * [Used dependencies](#used-dependencies)
+    + [Backend](#backend)
+    + [Frontend](#frontend)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-  * [Start application](#start-application)
-    + [PM2](#pm2)
+  * [Run application](#run-application)
+    + [Server](#server)
+    + [Client](#client)
 
 ## Sequence Diagram
 <img src="https://github.com/marienfeldtom/inez_admin/blob/master/diagram.svg">
@@ -64,14 +67,15 @@ cd frontend
 npm install
 ```
 
-## Start Server
+## Run application
+In order to run the application you need to start the server and the vue dev environment.
 
-Start server
+### Server
  ```javascript
  cd backend
 node server.js
 ```
-### PM2
+**PM2**
 
 If you want to keep the server running without having the SSH connection open, take a look at [pm2](https://www.npmjs.com/package/pm2)
 
@@ -81,7 +85,7 @@ cd backend
 pm2 start server.js
 ```
 
-## Start Vue Web App
+### Client
 
 ```javascript
 cd frontend
