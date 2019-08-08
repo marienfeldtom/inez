@@ -10,10 +10,18 @@ INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. Thi
 In this admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
-## Sequence Diagram of Client/Server Communication
+- [INEZ Admin](#inez-admin)
+  * [Sequence Diagram](#sequence-diagram)
+  * [Used dependencies](#used-dependencies)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Start application](#start-application)
+    + [PM2](#pm2)
+
+## Sequence Diagram
 <img src="https://github.com/marienfeldtom/inez_admin/blob/master/diagram.svg">
 
-## Used technologies/frameworks/dependencies
+## Used dependencies
 
 * Node.JS (javascript runtime)
 * NPM (dependency management)
@@ -43,7 +51,7 @@ You will need the following things properly installed on your computer.
 npm install
 ```
 
-## Running / Development
+## Start application
 
 Start server
  ```javascript
