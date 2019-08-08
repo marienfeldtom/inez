@@ -125,6 +125,7 @@
       "resolved": "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz",
       "version": "0.5.2"
     },
+    "fuse.js": "^3.4.5",
     "graceful-fs": {
       "integrity": "sha512-b9usnbDGnD928gJB3LrCmxoibr3VE4U2SMo5PBuBnokWyDADTqDPXg4YpwKF1trpH+UbGp7QLicO3+aWEy0+mw==",
       "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.1.tgz",
@@ -204,6 +205,7 @@
       "resolved": "https://registry.npmjs.org/mime-types/-/mime-types-2.1.24.tgz",
       "version": "2.1.24"
     },
+    "mocha": "^6.2.0",
     "ms": {
       "integrity": "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=",
       "resolved": "https://registry.npmjs.org/ms/-/ms-2.0.0.tgz",
@@ -326,6 +328,7 @@
       "resolved": "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.1.tgz",
       "version": "1.1.1"
     },
+    "socket.io": "^2.2.0",
     "statuses": {
       "integrity": "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=",
       "resolved": "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz",
@@ -368,5 +371,8 @@
       "resolved": "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz",
       "version": "1.1.2"
     }
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
