@@ -55,6 +55,14 @@ You will need the following things properly installed on your computer.
  **Configuration:**
  Configs can be found in `backend/config.json`, but there is no need to change something.
  
+| config key     | default value     |
+|----------------|-------------------|
+| webserver.ip   | 0.0.0.0           |
+| webserver.port | 3000              |
+| socket.ip      | 0.0.0.0           |
+| socket.port    | 3001              |
+| file           | lebensmittel.json |
+
  Install Server dependencies
 ```javascript
 cd backend
