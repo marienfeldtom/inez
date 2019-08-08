@@ -50,7 +50,7 @@ You will need the following things properly installed on your computer.
  * `git clone <repository-url>` this repository 
  
  **Configuration:**
- Configs can be found in `backend/config.json`.
+ Configs can be found in `backend/config.json`, but there is no need to change something.
  
  Install Server dependencies
 ```javascript
@@ -84,3 +84,5 @@ pm2 start server.js
 ```javascript
 npm run serve
 ```
+
+You can visit the app in browser under http://localhost:8080
