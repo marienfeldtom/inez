@@ -1,20 +1,36 @@
 # INEZ Admin
+  <img src="https://www.it-talents.de/thumbs/partner/edeka-digital-gmbh/original-500x173.jpg" width="150" title="INEZ"> <img src="https://www.it-talents.de/assets/img/logo_blue.svg" width="150" title="INEZ">
+  
 
+  
 INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. This repo contains the admin panel for my submission in this contest.
+
 * * *
+
 In this admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
-## Used technologies/frameworks/dependencies
+- [INEZ Admin](#inez-admin)
+  * [Sequence Diagram](#sequence-diagram)
+  * [Used dependencies](#used-dependencies)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Start application](#start-application)
+    + [PM2](#pm2)
 
-* Node.JS
-* NPM
-* ExpressJS
-* MustacheJS
+## Sequence Diagram
+<img src="https://github.com/marienfeldtom/inez_admin/blob/master/diagram.svg">
+
+## Used dependencies
+
+* Node.JS (javascript runtime)
+* NPM (dependency management)
+* ExpressJS (providing http admin panel)
+* MustacheJS (templating/rendering data)
 * lowdb (JSON database)
 * CORS (only enabled for development purposes)
-* socket.io for real time autocomplete and suggestions
-* socket.io-client
+* fuse.js (fuzzy keyword search)
+* socket.io (real time autocomplete and suggestions)
 
 ## Prerequisites
 
@@ -35,7 +51,7 @@ You will need the following things properly installed on your computer.
 npm install
 ```
 
-## Running / Development
+## Start application
 
 Start server
  ```javascript
