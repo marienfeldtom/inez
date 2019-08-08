@@ -1,4 +1,4 @@
-# INEZ Admin
+# INEZ Competition
   <img src="https://www.it-talents.de/thumbs/partner/edeka-digital-gmbh/original-500x173.jpg" width="150" title="INEZ"> <img src="https://www.it-talents.de/assets/img/logo_blue.svg" width="150" title="INEZ">
   
 
