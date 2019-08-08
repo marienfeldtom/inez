@@ -1,7 +1,12 @@
 # INEZ Admin
+  <img src="https://www.it-talents.de/thumbs/partner/edeka-digital-gmbh/original-500x173.jpg" width="150" title="INEZ"> <img src="https://www.it-talents.de/assets/img/logo_blue.svg" width="150" title="INEZ">
+  
 
+  
 INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. This repo contains the admin panel for my submission in this contest.
+
 * * *
+
 In this admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
