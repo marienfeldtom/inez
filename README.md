@@ -7,14 +7,15 @@ The application also offers the Socket.io interface which is used by the app to 
 
 ## Used technologies/frameworks/dependencies
 
-* Node.JS
-* NPM
-* ExpressJS
-* MustacheJS
+* Node.JS (javascript runtime)
+* NPM (dependency management)
+* ExpressJS (providing http admin panel)
+* MustacheJS (templating/rendering data)
 * lowdb (JSON database)
 * CORS (only enabled for development purposes)
-* socket.io for real time autocomplete and suggestions
-* socket.io-client
+* fuse.js (fuzzy keyword search)
+* socket.io (real time autocomplete and suggestions)
+* socket.io-client 
 
 ## Prerequisites
 
