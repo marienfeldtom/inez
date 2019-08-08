@@ -3,11 +3,11 @@
   
 
   
-INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. This repo contains the admin panel for my submission in this contest.
+INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. This repo contains the admin panel + client app for my submission in this contest.
 
 * * *
 
-In this admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
+In the admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
 - [INEZ Admin](#inez-admin)
@@ -23,6 +23,7 @@ The application also offers the Socket.io interface which is used by the app to 
 
 ## Used dependencies
 
+### Backend
 * Node.JS (javascript runtime)
 * NPM (dependency management)
 * ExpressJS (providing http admin panel)
@@ -31,6 +32,11 @@ The application also offers the Socket.io interface which is used by the app to 
 * CORS (only enabled for development purposes)
 * fuse.js (fuzzy keyword search)
 * socket.io (real time autocomplete and suggestions)
+
+### Frontend
+* Vue 3
+* BootsrapVue
+* socket.io-client
 
 ## Prerequisites
 
@@ -44,14 +50,21 @@ You will need the following things properly installed on your computer.
  * `git clone <repository-url>` this repository 
  
  **Configuration:**
- Configs can be found in `config.json`.
+ Configs can be found in `backend/config.json`.
  
- Install dependencies
+ Install Server dependencies
 ```javascript
+cd backend
 npm install
 ```
 
-## Start application
+ Install Client dependencies
+```javascript
+cd frontend
+npm install
+```
+
+## Start Server
 
 Start server
  ```javascript
@@ -64,4 +77,10 @@ If you want to keep the server running without having the SSH connection open, t
 Start server with pm2
 ```javascript
 pm2 start server.js
+```
+
+## Start Vue Web App
+
+```javascript
+npm run serve
 ```
