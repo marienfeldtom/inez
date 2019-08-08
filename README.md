@@ -68,6 +68,7 @@ npm install
 
 Start server
  ```javascript
+ cd backend
 node server.js
 ```
 ### PM2
@@ -76,12 +77,14 @@ If you want to keep the server running without having the SSH connection open, t
 
 Start server with pm2
 ```javascript
+cd backend
 pm2 start server.js
 ```
 
 ## Start Vue Web App
 
 ```javascript
+cd frontend
 npm run serve
 ```
 
