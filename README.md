@@ -89,3 +89,7 @@ npm run serve
 ```
 
 You can visit the app in browser under http://localhost:8080
+
+**HAPPY SHOPPING**
+
+<img src="https://media3.giphy.com/media/26xBJQgfNVrVEQes0/giphy.gif">
