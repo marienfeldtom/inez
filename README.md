@@ -53,8 +53,10 @@ You will need the following things properly installed on your computer.
  * `git clone <repository-url>` this repository 
  
  **Configuration:**
- Configs can be found in `backend/config.json`, but there is no need to change something.
+ Configs can be found in `backend/config.json` and `frontend/.env + frontend/.env.production`, but there is no need to change something.
  
+backend/config.json:
+
 | config key     | default value     |
 |----------------|-------------------|
 | webserver.ip   | 0.0.0.0           |
@@ -62,6 +64,13 @@ You will need the following things properly installed on your computer.
 | socket.ip      | 0.0.0.0           |
 | socket.port    | 3001              |
 | file           | lebensmittel.json |
+
+.env and .env.production (enter websocket ip and port from backend/config.json
+
+| config key     | default value     |
+|----------------|-------------------|
+| VUE_APP_ADRESS | http://localhost  |
+| VUE_APP_PORT   | 3001              |
 
  Install Server dependencies
 ```javascript
@@ -101,6 +110,9 @@ npm run serve
 ```
 
 You can visit the app in browser under http://localhost:8080
+
+Feel free to visit my hosted demo app at http://165.22.76.154/
+Admin Panel: http://165.22.76.154:3000
 
 **HAPPY SHOPPING**
 
