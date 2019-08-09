@@ -90,6 +90,6 @@ io.on('connection', client => {
   server.listen(settings.socket.port);
 
 
-app.listen(settings.port, settings.ip, function () {
+app.listen(settings.webserver.port, settings.webserver.ip, function () {
     console.log("Working on " + settings.webserver.ip + ":" + settings.webserver.port);
 });
