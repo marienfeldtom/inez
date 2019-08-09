@@ -31,7 +31,7 @@ The application also offers the Socket.io interface which is used by the app to 
 * NPM (dependency management)
 * ExpressJS (providing http admin panel)
 * MustacheJS (templating/rendering data)
-* PouchDB (database)
+* PouchDB (without CouchDB connection - just file storage)
 * CORS (only enabled for development purposes)
 * fuse.js (fuzzy keyword search)
 * socket.io (real time autocomplete and suggestions)
@@ -98,15 +98,6 @@ In order to run the application you need to start the server and the vue dev env
  ```javascript
  cd backend
 node server.js
-```
-**PM2**
-
-If you want to keep the server running without having the SSH connection open, take a look at [pm2](https://www.npmjs.com/package/pm2)
-
-Start server with pm2
-```javascript
-cd backend
-pm2 start server.js
 ```
 
 ### Client
