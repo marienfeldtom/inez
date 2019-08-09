@@ -3,16 +3,17 @@ var app = express();
 const low = require('lowdb')
 const Fuse = require('fuse.js')
 var cors = require('cors');
+const FileAsync = require('lowdb/adapters/FileAsync')
 const FileSync = require('lowdb/adapters/FileSync')
 const server = require('http').createServer();
 const io = require('socket.io')(server);
 var settings = require('./config.json');
 
 const adapter = new FileSync("lebensmittel.json")
-const db = low(adapter)
+const db = low(adapter, { storage: FileAsync })
 
-app.use(express.urlencoded({extended: true})); 
-app.use(express.json());   
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors());
 
 var mustacheExpress = require('mustache-express');
@@ -39,7 +40,7 @@ app.get('/all', function (req, res) {
             return idx++;
         }
     });
-    
+
     res.render('all.html', {
         "lebensmittel": lebensmittel, "idx": function () {
             return idx++;
@@ -47,7 +48,7 @@ app.get('/all', function (req, res) {
     });
 });
 
-var search = function(query){
+var search = function (query) {
     db.read();
     let entries = db.get('lebensmittel').value();
     var options = {
@@ -58,7 +59,7 @@ var search = function(query){
         //keys: [{name: 'produktname', weight: 0.7}, {name: 'synonyme', weight: 0.7}]
     }
     var fuse = new Fuse(entries, options);
-   return fuse.search(query);
+    return fuse.search(query);
 }
 
 // GET: Suchen nach Lebensmitteln
@@ -90,12 +91,12 @@ app.post('/upload', function (req, res) {
 io.on('connection', client => {
     console.log("Connection!");
     client.on('query', data => {
-         console.log(data); 
-         client.emit('result', search(data));
+        console.log(data);
+        client.emit('result', search(data));
     });
     client.on('disconnect', () => { console.log("Disconnect!"); });
-  });
-  server.listen(settings.socket.port);
+});
+server.listen(settings.socket.port);
 
 
 app.listen(settings.webserver.port, settings.webserver.ip, function () {
