@@ -8,7 +8,7 @@ const server = require('http').createServer();
 const io = require('socket.io')(server);
 var settings = require('./config.json');
 
-const adapter = new FileSync(settings.file)
+const adapter = new FileSync("lebensmittel.json")
 const db = low(adapter)
 
 app.use(express.urlencoded({extended: true})); 
