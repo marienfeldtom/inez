@@ -80,7 +80,7 @@ io.on('connection', client => {
     });
     client.on('disconnect', () => { console.log("Disconnect!"); });
 });
-server.listen(settings.socket.port);
+server.listen(settings.socket.port, settings.socket.ip);
 
 
 app.listen(settings.webserver.port, settings.webserver.ip, function () {
