@@ -114,7 +114,7 @@ export default {
         "Beutel"
       ]
     }],
-      socket: io('http://localhost:3001')
+      socket: io(process.env.VUE_APP_ADRESS + ':' + process.env.VUE_APP_PORT)
     }
   },
   created: {
