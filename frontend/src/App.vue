@@ -117,9 +117,6 @@ export default {
       socket: io(process.env.VUE_APP_ADRESS + ':' + process.env.VUE_APP_PORT)
     }
   },
-  created: {
-
-  },
   mounted() {
         this.socket.on('result', (data) => {
             this.results = data;
