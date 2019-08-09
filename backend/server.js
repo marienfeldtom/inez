@@ -23,6 +23,7 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 var lebensmittel = db.get('lebensmittel').value();
+console.log(lebensmittel);
 
 // Rendert die Ansicht zum Hinzufügen von Lebensmitteln
 app.get('/', function (req, res) {
