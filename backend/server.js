@@ -10,7 +10,7 @@ const io = require('socket.io')(server);
 var settings = require('./config.json');
 
 const adapter = new FileSync("lebensmittel.json")
-const db = low(adapter, { storage: FileAsync })
+const db = low(adapter)
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,6 +24,22 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 
+function readJsonFileAsync(filepath, callback) {
+    var fs = require('fs');
+    fs.readFile(filepath, 'utf-8', function(err, data) {
+        if (err) { callback(err, null); }
+        else {
+            result = JSON.parse(data);
+            if (result) {
+                callback(null, result);
+            } else {
+                callback('parse error', null);
+            }
+        }
+    });
+}
+
+
 // Rendert die Ansicht zum Hinzufügen von Lebensmitteln
 app.get('/', function (req, res) {
     db.read();
@@ -32,20 +48,20 @@ app.get('/', function (req, res) {
 
 // Rendert die Ansicht zur Übersicht aller Lebensmittel
 app.get('/all', function (req, res) {
-    db.read();
-    var idx = 1;
-    let lebensmittel = db.get('lebensmittel').value();
+    readJsonFileAsync("./lebensmittel.json", function(test, lebensmittel){
+        var idx = 1;
     console.log({
-        "lebensmittel": lebensmittel, "idx": function () {
+        "lebensmittel": lebensmittel.lebensmittel, "idx": function () {
             return idx++;
         }
     });
 
     res.render('all.html', {
-        "lebensmittel": lebensmittel, "idx": function () {
+        "lebensmittel": lebensmittel.lebensmittel, "idx": function () {
             return idx++;
         }
     });
+    })
 });
 
 var search = function (query) {
