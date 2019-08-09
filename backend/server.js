@@ -3,17 +3,16 @@ var app = express();
 const low = require('lowdb')
 const Fuse = require('fuse.js')
 var cors = require('cors');
-const FileAsync = require('lowdb/adapters/FileAsync')
 const FileSync = require('lowdb/adapters/FileSync')
 const server = require('http').createServer();
 const io = require('socket.io')(server);
 var settings = require('./config.json');
 
-const adapter = new FileSync("lebensmittel.json")
+const adapter = new FileSync(settings.file)
 const db = low(adapter)
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());   
 app.use(cors());
 
 var mustacheExpress = require('mustache-express');
@@ -23,49 +22,34 @@ app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
-
-function readJsonFileAsync(filepath, callback) {
-    var fs = require('fs');
-    fs.readFile(filepath, 'utf-8', function(err, data) {
-        if (err) { callback(err, null); }
-        else {
-            result = JSON.parse(data);
-            if (result) {
-                callback(null, result);
-            } else {
-                callback('parse error', null);
-            }
-        }
-    });
-}
-
+var lebensmittel = db.get('lebensmittel').value();
 
 // Rendert die Ansicht zum Hinzufügen von Lebensmitteln
 app.get('/', function (req, res) {
-    db.read();
+    //db.read();
     res.render('index.html');
 });
 
 // Rendert die Ansicht zur Übersicht aller Lebensmittel
 app.get('/all', function (req, res) {
-    readJsonFileAsync("./lebensmittel.json", function(test, lebensmittel){
-        var idx = 1;
+   // db.read();
+    var idx = 1;
+    
     console.log({
-        "lebensmittel": lebensmittel.lebensmittel, "idx": function () {
+        "lebensmittel": lebensmittel, "idx": function () {
             return idx++;
         }
     });
-
+    
     res.render('all.html', {
-        "lebensmittel": lebensmittel.lebensmittel, "idx": function () {
+        "lebensmittel": db.get('lebensmittel').value(), "idx": function () {
             return idx++;
         }
     });
-    })
 });
 
-var search = function (query) {
-    db.read();
+var search = function(query){
+   // db.read();
     let entries = db.get('lebensmittel').value();
     var options = {
         shouldSort: true,
@@ -75,7 +59,7 @@ var search = function (query) {
         //keys: [{name: 'produktname', weight: 0.7}, {name: 'synonyme', weight: 0.7}]
     }
     var fuse = new Fuse(entries, options);
-    return fuse.search(query);
+   return fuse.search(query);
 }
 
 // GET: Suchen nach Lebensmitteln
@@ -86,7 +70,7 @@ app.get('/search', function (req, res) {
 
 // POST: Eintragen der Lebensmittel in die Datenbank
 app.post('/upload', function (req, res) {
-    db.read();
+  //  db.read();
     //Prüfen ob bereits vorhanden
     if (db.get('lebensmittel').find({ produktname: req.body.produktname }).value()) {
         res.render('index.html', { exists: true });
@@ -107,12 +91,12 @@ app.post('/upload', function (req, res) {
 io.on('connection', client => {
     console.log("Connection!");
     client.on('query', data => {
-        console.log(data);
-        client.emit('result', search(data));
+         console.log(data); 
+         client.emit('result', search(data));
     });
     client.on('disconnect', () => { console.log("Disconnect!"); });
-});
-server.listen(settings.socket.port);
+  });
+  server.listen(settings.socket.port);
 
 
 app.listen(settings.webserver.port, settings.webserver.ip, function () {
