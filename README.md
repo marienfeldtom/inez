@@ -118,8 +118,8 @@ npm run serve
 
 You can visit the app in browser under http://localhost:8080
 
-Feel free to visit my hosted demo app at http://165.22.76.154/
-Admin Panel: http://165.22.76.154:3000
+Feel free to visit my hosted demo app at http://marienfeld.online/
+Admin Panel: http://marienfeld.online:3000/
 
 **HAPPY SHOPPING**
 
