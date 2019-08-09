@@ -31,7 +31,7 @@ The application also offers the Socket.io interface which is used by the app to 
 * NPM (dependency management)
 * ExpressJS (providing http admin panel)
 * MustacheJS (templating/rendering data)
-* PouchDB (JSON database)
+* PouchDB (database)
 * CORS (only enabled for development purposes)
 * fuse.js (fuzzy keyword search)
 * socket.io (real time autocomplete and suggestions)
