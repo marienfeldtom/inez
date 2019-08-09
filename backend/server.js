@@ -11,7 +11,8 @@ var settings = require('./config.json');
 const adapter = new FileSync(settings.file)
 const db = low(adapter)
 
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true})); 
+app.use(express.json());   
 app.use(cors());
 
 var mustacheExpress = require('mustache-express');

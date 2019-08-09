@@ -966,6 +966,19 @@
       "einheiten": [
         ""
       ]
+    },
+    {
+      "produktname": "Kuchen",
+      "plural": "Kuchen",
+      "bild": "http://handwerksbaeckerei-mack.de/wp-content/uploads/2015/11/Schwarzw%C3%A4lder-Kirsch-Torte_P1070991_bearb.png",
+      "kategorie": "Snacks & Süßwaren",
+      "synonyme": [
+        ""
+      ],
+      "preinheit": "Stück",
+      "einheiten": [
+        ""
+      ]
     }
   ]
 }
