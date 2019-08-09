@@ -31,14 +31,13 @@ app.get('/', function (req, res) {
 
 // Rendert die Ansicht zur Übersicht aller Lebensmittel
 app.get('/all', function (req, res) {
-    db.read();
     var idx = 1;
     console.log({
         "lebensmittel": db.get('lebensmittel').value(), "idx": function () {
             return idx++;
         }
     });
-    
+
     res.render('all.html', {
         "lebensmittel": db.get('lebensmittel').value(), "idx": function () {
             return idx++;
