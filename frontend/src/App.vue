@@ -16,8 +16,8 @@
 
 <div class="grid">
   <div v-for="result in results" class="item">
-  <img class="img-fluid" :src="result.bild">
-  <span> {{getNumber()}} {{result.preinheit}} {{getName(result.produktname, result.plural)}}</span>
+  <img class="img-fluid" :src="result.doc.bild">
+  <span> {{getNumber()}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural)}}</span>
   </div>
 </div>
 
@@ -119,6 +119,7 @@ export default {
   },
   mounted() {
         this.socket.on('result', (data) => {
+          console.log(data);
             this.results = data;
         });
     },

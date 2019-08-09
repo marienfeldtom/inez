@@ -79,12 +79,12 @@
             {{#lebensmittel}}
             <tr>
               <th scope="row">{{idx}}</th>
-              <td>{{produktname}} / {{plural}}</td>
-              <td><img id="bild" src="{{bild}}" class="img-fluid img-thumbnail"></td>
-              <td>{{kategorie}}</td>
-              <td>{{synonyme}}</td>
-              <td>{{preinheit}}</td>
-              <td>{{einheiten}}</td>
+              <td>{{doc.produktname}} / {{plural}}</td>
+              <td><img id="bild" src="{{doc.bild}}" class="img-fluid img-thumbnail"></td>
+              <td>{{doc.kategorie}}</td>
+              <td>{{doc.synonyme}}</td>
+              <td>{{doc.preinheit}}</td>
+              <td>{{doc.einheiten}}</td>
             </tr>
             {{/lebensmittel}}
           </tbody>
