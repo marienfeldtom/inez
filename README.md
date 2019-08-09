@@ -69,7 +69,7 @@ backend/config.json:
 
 | config key     | default value     |
 |----------------|-------------------|
-| VUE_APP_ADRESS | http://165.22.24.12 |
+| VUE_APP_ADRESS | http://165.22.24.12  |
 | VUE_APP_PORT   | 3001              |
 
 .env (enter websocket ip and port from backend/config.json)
