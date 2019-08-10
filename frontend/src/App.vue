@@ -1,29 +1,62 @@
 <template>
-  <div style="height: 100%;">
-    <div>
-      <b-nav id="nav">
+  <div style="height: vh">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+      <a class="navbar-brand" href="#">
         <img
           src="./assets/logo.png"
           style="height: 80px; width: auto; margin-top: 10px; margin-left: 30px;"
         />
-        <b-nav-item active>
-          <i class="fas fa-list-ul"></i>Einkaufsliste
-        </b-nav-item>
-        <b-nav-item>
-          <i class="fas fa-map-pin"></i>Edeka Finder
-        </b-nav-item>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <img
-          id="logo"
-          class
-          src="https://www.edeka.de/b2c-design/global/core/assets/organisms/m401-header/logo.png"
-        />
-      </b-nav>
-    </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="#">
+              <i class="fas fa-list-ul"></i>Einkaufsliste
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#">
+              <i class="fas fa-map-pin"></i> Edeka Finder
+            </a>
+          </li>
+        </ul>
+        <!--  <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>-->
+      </div>
+    </nav>
 
-    <b-container id="cont">
+    <div class="container" id="cont">
       <h1>Einkaufsliste:</h1>
-      <b-form-input v-model="data" @keyup="sendMessage()" placeholder="Produkt hinzufügen..."></b-form-input>
+      <div class="form-group">
+        <input
+          type="name"
+          v-model="data"
+          @keyup="sendMessage()"
+          class="form-control"
+          id="produkt"
+          placeholder="Produkt hinzufügen..."
+        />
+      </div>
 
       <div class="grid">
         <div v-for="result in results" class="item">
@@ -39,7 +72,7 @@
           <span>1 {{result.preinheit}} {{result.produktname}}</span>
         </div>
       </div>
-    </b-container>
+    </div>
 
     <footer>
       <span>INEZ Code Competion submission by Tom Marienfeld</span>
@@ -109,12 +142,11 @@ h1 {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 }
-#nav {
-  height: 100px;
+nav {
+  min-height: 100px;
   background-image: URL("https://www.edeka.de/b2c-design/global/core/assets/images/background-dark.jpg");
-  background-size: contain;
+  background-size: auto;
   background-repeat: repeat;
-  width: 100%;
 }
 
 #cont {
@@ -129,8 +161,8 @@ h1 {
   margin-right: 40px;
 }
 
-.nav-link {
-  padding-top: 2rem !important;
+.nav-item a {
+  margin-left: 20px;
   color: white;
   font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
@@ -143,6 +175,10 @@ h1 {
     padding-left: 10px !important;
     padding-top: 30px !important;
   }
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 .nav-link:hover {
@@ -203,5 +239,15 @@ footer {
 footer span {
   line-height: 40px;
   margin-left: 40px;
+}
+
+.btn-outline-success {
+  color: #f5d033 !important;
+}
+
+.btn-outline-success:hover {
+  color: black !important;
+  background-color: #f5d033 !important;
+  border-color: #f5d033 !important;
 }
 </style>
