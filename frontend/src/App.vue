@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <footer>
+    <footer class="d-none d-md-block">
       <span>INEZ Code Competion submission by Tom Marienfeld</span>
     </footer>
   </div>
