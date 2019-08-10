@@ -20,6 +20,7 @@ The application also offers the Socket.io interface which is used by the app to 
   * [Run application](#run-application)
     + [Server](#server)
     + [Client](#client)
+  * [Deployment](#deployment)
 
 ## Sequence Diagram
 <img src="https://github.com/marienfeldtom/inez_admin/blob/master/diagram.svg">
@@ -108,6 +109,56 @@ npm run serve
 ```
 
 You can visit the app in browser under http://localhost:8080
+
+## Deployment
+
+After each push to the master branch, github starts a webhook, which fires a POST request to the build / production server.
+The server then pulls the branch, installs the dependencies and builds both frontend and backend it. Afterwards mocha tests are executed and if they are successful, the application launches.
+
+deploy.sh
+```shell 
+cd inez
+pm2 stop ./backend/server.js
+pm2 stop static-page-server-80
+echo "Pulling from Master"
+git pull https://{{apikey}}:x-oauth-basic@github.com/marienfeldtom/inez.git  master
+echo "Pulled successfully from master"
+echo "Installing Backend"
+npm install --prefix ./backend
+echo "Installing Frontend"
+npm install --prefix ./frontend
+echo "Starting Backend Server"
+pm2 start ./backend/server.js
+echo "Building Frontend"
+cd frontend
+npm run build
+echo "Serving Frontend"
+pm2 serve dist 80
+echo "Server restarted Successfully"
+```
+
+endpoint.js
+```javascript 
+var express = require("express");
+var app = express();
+var childProcess = require('child_process');
+
+
+app.post("/webhooks/github", function (req, res) {
+        deploy(res);
+})
+
+function deploy(res){
+    childProcess.exec('cd /home && ./deploy.sh', function(err, stdout, stderr){
+        if (err) {
+         console.error(err);
+         return res.send(500);
+        }
+        res.send(200);
+      });
+}
+```
+
 
 Feel free to visit my hosted demo app at http://marienfeld.online/
 Admin Panel: http://marienfeld.online:3000/
