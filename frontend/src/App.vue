@@ -59,7 +59,7 @@
       </div>
 
       <div class="grid">
-        <div v-for="result in results" class="item">
+        <div v-for="result in results" class="item" @click="addItem(result, getNumber())">
           <img class="img-fluid" :src="result.doc.bild" />
           <span>{{getNumber()}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural)}}</span>
         </div>
@@ -68,8 +68,8 @@
       <hr />
       <div class="grid">
         <div v-for="result in liste" class="item">
-          <img class="img-fluid" :src="result.bild" />
-          <span>1 {{result.preinheit}} {{result.produktname}}</span>
+          <img class="img-fluid" :src="result.doc.bild" />
+          <span>{{result.doc.number}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural)}}</span>
         </div>
       </div>
     </div>
@@ -85,15 +85,21 @@
 <script>
 import io from "socket.io-client";
 import { liste } from "./storage.js";
+const PouchDB = require("pouchdb").default;
+var db = new PouchDB("liste");
+
 export default {
   name: "app",
   data() {
     return {
       data: "",
       results: [],
-      liste: liste,
+      liste: [],
       socket: io(process.env.VUE_APP_ADRESS + ":" + process.env.VUE_APP_PORT)
     };
+  },
+  created() {
+    this.getItems().then(response => (this.liste = response));
   },
   mounted() {
     this.socket.on("result", data => {
@@ -101,6 +107,39 @@ export default {
     });
   },
   methods: {
+    getItems: () => {
+      return db.allDocs({ include_docs: true }).then(function(lebensmittel) {
+        return lebensmittel.rows;
+      });
+    },
+    countItemUp: function(item, number) {
+      db.get(item.doc._id).then(function(doc) {
+        doc.number += 1;
+        return db.put(doc);
+      });
+    },
+    itemExists: function(item) {
+      return db.get(item.doc._id);
+    },
+    addItem: function(item, number) {
+      this.itemExists(item)
+        .then(() => {
+          this.countItemUp(item, number);
+          console.log(item);
+          let listItem = this.liste.find(x => x.doc._id === item.doc._id);
+          console.log(listItem);
+          listItem.doc.number += parseInt(number);
+        })
+        .catch(err => {
+          delete item.doc._rev;
+          item.doc.number = parseInt(number);
+          db.put(item.doc).then(function() {
+            console.log("Erfolg!");
+          });
+          this.liste.push(item);
+          console.log(err);
+        });
+    },
     sendMessage: function() {
       if (this.data == "") {
         this.results = [];

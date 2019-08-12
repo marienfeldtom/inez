@@ -11,6 +11,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.27",
     "core-js": "^2.6.5",
+    "pouchdb": "^7.1.1",
+    "pouchdb-browser": "^7.1.1",
     "socket.io-client": "^2.2.0",
     "vue": "^2.6.10"
   },
