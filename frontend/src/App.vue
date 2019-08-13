@@ -46,16 +46,29 @@
     </nav>
 
     <div class="container" id="cont">
-      <h1>Einkaufsliste:</h1>
-      <div class="form-group">
-        <input
-          type="name"
-          v-model="data"
-          @keyup="sendMessage()"
-          class="form-control"
-          id="produkt"
-          placeholder="Produkt hinzufügen..."
-        />
+      <h3 style="margin-top: 10px; margin-bottom: 10px;">Produkt hinzufügen:</h3>
+      <div class="form-row">
+        <div class="col-11">
+          <input
+            type="name"
+            v-model="data"
+            @keyup="sendMessage()"
+            class="form-control"
+            id="produkt"
+            placeholder="Produkt hinzufügen..."
+          />
+        </div>
+        <div class="col-1">
+          <button
+            style="float:left;"
+            @click="results=[]; data=null"
+            type="button"
+            class="close"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
       </div>
 
       <div class="grid">
@@ -66,6 +79,7 @@
       </div>
 
       <hr />
+      <span>Meine Liste:</span>
       <transition-group name="list" tag="div" class="grid">
         <div
           v-for="result in liste"
