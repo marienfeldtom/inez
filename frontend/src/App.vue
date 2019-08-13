@@ -146,16 +146,9 @@ export default {
     },
     deleteItem: function(item) {
       db.get(item.doc._id).then(doc => {
-        let tobedeleted = this.liste.filter(function(obj) {
-          return obj.doc._id == item.doc._id;
-        });
-        tobedeleted[0].doc.removed = true;
-
         this.liste = this.liste.filter(function(obj) {
           return obj.doc._id !== item.doc._id;
         });
-
-        this.$forceUpdate();
         return db.remove(doc);
       });
     },
