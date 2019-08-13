@@ -61,17 +61,22 @@
       <div class="grid">
         <div v-for="result in results" class="item" @click="addItem(result, getNumber())">
           <img class="img-fluid" :src="result.doc.bild" />
-          <span>{{getNumber()}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural)}}</span>
+          <span>{{getNumber()}} {{getPrEinheit(result)}} {{getName(result.doc.produktname, result.doc.plural, getNumber())}}</span>
         </div>
       </div>
 
       <hr />
-      <div class="grid">
-        <div v-for="result in liste" class="item">
+      <transition-group name="list" tag="div" class="grid">
+        <div
+          v-for="result in liste"
+          v-bind:key="result.doc._id"
+          class="item"
+          @click="deleteItem(result)"
+        >
           <img class="img-fluid" :src="result.doc.bild" />
-          <span>{{result.doc.number}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural)}}</span>
+          <span>{{result.doc.number}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural, result.doc.number)}}</span>
         </div>
-      </div>
+      </transition-group>
     </div>
 
     <footer class="d-none d-md-block">
@@ -125,10 +130,9 @@ export default {
       this.itemExists(item)
         .then(() => {
           this.countItemUp(item, number);
-          console.log(item);
           let listItem = this.liste.find(x => x.doc._id === item.doc._id);
-          console.log(listItem);
           listItem.doc.number += parseInt(number);
+          this.$forceUpdate();
         })
         .catch(err => {
           delete item.doc._rev;
@@ -139,6 +143,21 @@ export default {
           this.liste.push(item);
           console.log(err);
         });
+    },
+    deleteItem: function(item) {
+      db.get(item.doc._id).then(doc => {
+        let tobedeleted = this.liste.filter(function(obj) {
+          return obj.doc._id == item.doc._id;
+        });
+        tobedeleted[0].doc.removed = true;
+
+        this.liste = this.liste.filter(function(obj) {
+          return obj.doc._id !== item.doc._id;
+        });
+
+        this.$forceUpdate();
+        return db.remove(doc);
+      });
     },
     sendMessage: function() {
       if (this.data == "") {
@@ -158,12 +177,15 @@ export default {
       }
       return num;
     },
-    getName: function(produktname, plural) {
-      if (this.getNumber() > 1) {
+    getName: function(produktname, plural, number) {
+      if (number > 1) {
         return plural;
       } else {
         return produktname;
       }
+    },
+    getPrEinheit(item) {
+      return item.doc.preinheit;
     }
   }
 };
@@ -177,6 +199,24 @@ body {
   background-color: #f5f5f5 !important;
   height: 100%;
 }
+
+.list-item {
+  display: inline-block;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+#tick {
+  position: absolute;
+  width: 100px;
+  z-index: 99;
+}
 h1 {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
@@ -189,7 +229,7 @@ nav {
 }
 
 #cont {
-  heigth: 100%;
+  height: 100%;
 }
 
 #logo {
@@ -239,6 +279,7 @@ i {
 
 .item {
   border-radius: 4px;
+  z-index: 99;
   border-style: solid;
   border-width: 1px;
   border-color: grey;
