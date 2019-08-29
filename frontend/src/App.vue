@@ -27,21 +27,12 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#">
               <i class="fas fa-map-pin"></i> Edeka Finder
             </a>
-          </li>
+          </li> -->
         </ul>
-        <!--  <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>-->
       </div>
     </nav>
 
@@ -73,8 +64,7 @@
 
       <div class="grid">
         <div v-for="result in results" class="item" @click="addItem(result, getNumber())">
-          <img class="img-fluid" :src="result.doc.bild" />
-          <span>{{getNumber()}} {{getPrEinheit(result)}} {{getName(result.doc.produktname, result.doc.plural, getNumber())}}</span>
+          <card :item="result.doc" :number="getNumber()"></card>
         </div>
       </div>
 
@@ -87,8 +77,7 @@
           class="item"
           @click="deleteItem(result)"
         >
-          <img class="img-fluid" :src="result.doc.bild" />
-          <span>{{result.doc.number}} {{result.doc.preinheit}} {{getName(result.doc.produktname, result.doc.plural, result.doc.number)}}</span>
+          <card :item="result.doc"></card>
         </div>
       </transition-group>
     </div>
@@ -103,7 +92,7 @@
 
 <script>
 import io from "socket.io-client";
-import { liste } from "./storage.js";
+import Card from "./components/Card.vue";
 const PouchDB = require("pouchdb").default;
 var db = new PouchDB("liste");
 
@@ -116,6 +105,9 @@ export default {
       liste: [],
       socket: io(process.env.VUE_APP_ADRESS + ":" + process.env.VUE_APP_PORT)
     };
+  },
+  components: {
+    card: Card
   },
   created() {
     this.getItems().then(response => (this.liste = response));
@@ -183,16 +175,6 @@ export default {
         num = "1";
       }
       return num;
-    },
-    getName: function(produktname, plural, number) {
-      if (number > 1) {
-        return plural;
-      } else {
-        return produktname;
-      }
-    },
-    getPrEinheit(item) {
-      return item.doc.preinheit;
     }
   }
 };

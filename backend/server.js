@@ -57,7 +57,6 @@ var search = function (query) {
                 findAllMatches: true,
                 keys: ['doc.produktname', 'doc.synonyme'],
                 threshold: 0.2
-                //keys: [{name: 'produktname', weight: 0.7}, {name: 'synonyme', weight: 0.7}]
             }
             var fuse = new Fuse(lebensmittel.rows, options);
             resolve(fuse.search(query));
