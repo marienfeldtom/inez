@@ -184,3 +184,4 @@ Some things are still not finished in this application.
 * Seperate Views and Logic (for example with Vuex)
 * Let the user change the unit (at the moment only the primary unit is used).
 * Include more tests
+* Suggest Edeka products from an API
