@@ -20,6 +20,7 @@ The application also offers the Socket.io interface which is used by the app to 
   * [Run application](#run-application)
     + [Server](#server)
     + [Client](#client)
+    + [Tests](#tests)
   * [Deployment](#deployment)
 
 ## Sequence Diagram
@@ -39,7 +40,8 @@ The application also offers the Socket.io interface which is used by the app to 
 
 ### Frontend
 * Vue 3
-* BootsrapVue
+* Bootstrap
+* PouchDB
 * socket.io-client
 
 ## Prerequisites
@@ -108,6 +110,14 @@ cd frontend
 npm run serve
 ```
 
+### Tests
+Tests can be found in /backend/test/socket.js.
+The test imports the server and starts it. Then it simulates a client, and sends a query containing the word "banane". If the correct result is returned, the test succeeds.
+
+```javascript
+npm run test
+```
+
 You can visit the app in browser under http://localhost:8080
 
 ## Deployment
@@ -121,7 +131,7 @@ cd inez
 pm2 stop ./backend/server.js
 pm2 stop static-page-server-80
 echo "Pulling from Master"
-git pull https://{{apikey}}:x-oauth-basic@github.com/marienfeldtom/inez.git  master
+git pull https://{{inserapikeyhere}}:x-oauth-basic@github.com/marienfeldtom/inez.git  master
 echo "Pulled successfully from master"
 echo "Installing Backend"
 npm install --prefix ./backend
