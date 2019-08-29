@@ -7,7 +7,7 @@ INEZ is a German Code Competition hosted by IT-Talents.de and EDEKA Digital. Thi
 
 * * *
 
-In the admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. 
+In the admin panel EDEKA employees could add ingredients that can be use by the end user in their intelligent grocery list. They can search a list of example ingeredients I created including synonyms, units and images. 
 The application also offers the Socket.io interface which is used by the app to gain ingredient information.
 
 - [INEZ Competition](#inez-competition)
@@ -22,6 +22,7 @@ The application also offers the Socket.io interface which is used by the app to 
     + [Client](#client)
     + [Tests](#tests)
   * [Deployment](#deployment)
+  * [TODO](#todo)
 
 ## Sequence Diagram
 <img src="https://github.com/marienfeldtom/inez_admin/blob/master/diagram.svg">
@@ -176,3 +177,10 @@ Admin Panel: http://marienfeld.online:3000/
 **HAPPY SHOPPING**
 
 <img src="https://media3.giphy.com/media/26xBJQgfNVrVEQes0/giphy.gif">
+
+## TODO
+
+Some things are still not finished in this application. 
+* Seperate Views and Logic (for example with Vuex)
+* Let the user change the unit (at the moment only the primary unit is used).
+* Include more tests
