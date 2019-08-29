@@ -79,9 +79,16 @@ io.on('connection', client => {
     });
     client.on('disconnect', () => { console.log("Disconnect!"); });
 });
-server.listen(settings.socket.port, settings.socket.ip);
+server.listen(settings.socket.port, settings.socket.ip,function () {
+    console.log("Socket Server working on " + settings.socket.ip + ":" + settings.socket.port);
+});
 
 
 app.listen(settings.webserver.port, settings.webserver.ip, function () {
-    console.log("Working on " + settings.webserver.ip + ":" + settings.webserver.port);
+    console.log("Webserver working on " + settings.webserver.ip + ":" + settings.webserver.port);
 });
+
+module.exports = {
+    server: server
+    };
+
